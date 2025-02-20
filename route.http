@@ -1,0 +1,31 @@
+POST http://localhost:3333/users
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Accept: application/json
+
+{
+    "name": "Leal aws"
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="text"
+
+title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="image-test.png"
+Content-Type: image/png
+
+< ./src/image-test.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+POST http://localhost:3333/users/4512142f-717a-41d1-8799-e2aa1c9969b1/upload
+Content-Type: multipart/form-data
+Accept: application/json
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="image-test.jpg"
+Content-Type: image/jpeg
+
+< ./src/image-test.jpg
+--boundary--
